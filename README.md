@@ -1,6 +1,10 @@
-# Digital History Portfolio Projects
+# Digital History Map Project
 
-Congratulations, you have finished all the "basic skills" assignments. All of the rest of the assignments for the rest of the year will live in a single repository -- this one.  Only the oral history assignment is required to pass the class. But those of you looking for a "B" will need to do the spatial history assignment, while those of you looking for an "A" will also need to do the project proposal.
+**WARNING (Feb 17, 2021)** This repository is being constructed in preparation for my talk on Feb. 26. Please expect things to change. In particular, the git history is still being pruned so `git pull` may fail in future.
+
+**NOTE:** This code has mostly been extracted from [a real assignment I use in my own Digital History class](https://github.com/DigitalHistory/advanced-topics). Please feel free to experiment with the code as you wish. 
+
+Congratulations, you have finished all the "basic skills" assignments. For the rest of the 
 
 
 These three assignments share some basic infrastructure.  This is on purpose.  If you do all three of them, you should be able to very easily turn this repository into a small "digital portfolio" showcasing your work for this class. Not all of you will want to do this, but it's nice to have the option.
@@ -66,7 +70,7 @@ Notice the addition of a pair of curly brackets containing a CSS celector below 
 
 ## Viewing the Live Repo
 
-It is **really easy** to flip a switch and make this repo go live! Near the top of this page you will see a :gear: gear icon -- this is the settings page. Navigate to that page and scroll odwn to the heading labeled `Github Pages`.  There's a drop-down menu there currently reading "none".  Click on the box and select `master branch` instead.  Moments later, your site will appear live at the URL now displayed in a blue box within ht eGithub Pages section.
+It is **really easy** to flip a switch and make this repo go live! Near the top of this page you will see a :gear: gear icon -- this is the settings page. Navigate to that page and scroll down to the heading labeled `Github Pages`.  There's a drop-down menu there currently reading "none".  Click on the box and select `master branch` instead.  Moments later, your site will appear live at the URL now displayed in a blue box within the Github Pages section.
 
 That's it! You're Live! [You can read more about Github Pages here](https://help.github.com/en/articles/what-is-github-pages)
 
