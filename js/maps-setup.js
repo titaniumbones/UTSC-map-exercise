@@ -120,7 +120,7 @@ let slythMarkerInfo =
 let gryfMarkers = processMarkerLayer(gryfMarkerInfo,
                                      {description: 'Gryffindor: People and Places', defaultIcon: gryfIcon}),
     slythMarkers = processMarkerLayer(slythMarkerInfo,
-                                      {description: 'Slytherin: Peple and Places', defaultIcon: slythIcon});
+                                      {description: 'Slytherin: People and Places', defaultIcon: slythIcon});
 
 
 
@@ -223,7 +223,7 @@ let tunnelPath = L.polyline([[55.49065933144361,-1.6042077541351318],
                                     color: gryfCol,
                                     weight: 6,
                                     title: 'Tunnel to Hogsmeade',
-                                    windowContent: `<h3>Marauders' Map Tunnel</h3><p>Not really sure why this worked in the first ocuple of books.</p>`})
+                                    windowContent: `<h3>Marauders' Map Tunnel</h3><p>Not really sure why this worked in the first couple of books.</p>`})
 
 let horcruxPath = L.polyline([[55.49058639152367,-1.5951092937469482],
                               [55.61679475360749,-1.6392910480499268]], {
