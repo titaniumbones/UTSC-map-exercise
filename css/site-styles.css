@@ -31,22 +31,23 @@
     --default-bg: white;
 }
 
+/* LAYOUT */
+/* the page uses `flex` display for a linear layout in which the main element can grow easily` */
+/* the `main` element uses `grid` internally for more precise control */
 
-/* flex on the body element lets us grow the main item as nec */
+/* LAYOUT - PAGE */
+/* use flex on the body element so the `main` element can grow as needed (harder w/ grid) */
+/* `body` has 3 direct children, which are its flex items: `header`, `main`, and `footer` */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* add some padding --  */
-section, article, aside {
-    padding: 1rem;
-}
 
-/* set display:grid here, but use sub-files to set up grid items on indiv pages */
+/* set display:grid here, add grid items on individual pages */
 .main-container {
-    flex-grow: 1;               /*all this item to grow*/
+    flex-grow: 1;               /*allow this item to grow*/
     display: grid;
     background-color: var(--default-bg);    /*reset so that it's obvious when child elements have CSS issues*/    
 }
@@ -60,8 +61,142 @@ footer#page-footer {
 }
 
 
+/* LAYOUT - MAIN  */
+
+.main-container {
+    grid-template-areas: "intro map legend" "main main main";
+    grid-auto-columns: 1fr;
+    grid-template-rows: 85vh 1fr;
+}
+
+section#intro {
+    grid-area: intro;
+    background-color: var(--color-highlight1);
+    border: 1px solid var(--color-custom-borders);
+    overflow: auto;             /*allow overflow on this section*/
+}
+
+
+section#map_canvas {
+    grid-area: map;
+    background-color: var(--color-highlight2);
+    border: 1px solid var(--color-custom-borders);
+    height: 85vh
+}
+
+section#legend {
+    grid-area: legend;
+    background-color: var(--color-highlight2);
+    border: 1px solid var(--color-custom-borders);
+    overflow: auto;             /*allow overflow on this section*/
+}
+
+section#maintext {
+    grid-area: main;
+    background-color: var(--color-highlight1);
+    border: 1px solid var(--color-custom-borders);
+}
+
+/* add some padding --  */
+section, article, aside {
+    padding: 1rem;
+}
+
+
+/* NON-LAYOUT STYLING */
+
+/* HEADER & FOOTER */
 /* since this is a simple site, use of variables here is a little overkill. */
 /* However, it may still be in your interest to use them.  */
 header#page-header, footer#page-footer {
     background-color: var(--color-lightGrey);
 }
+
+
+/* MAP LEGEND */
+/* the `#map_legend` div sits inside the `#legend` section. */
+/* though we try to avoid deeply nested `div` elements, doing it this way */
+/* allows us to style the legend "buttons" more directly */
+/* arrange the legend elements using grid (just for fun) */
+div#map_legend {
+    width: 100%;
+    display: grid;
+    justify-content: space-around;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, 45%);
+
+}
+
+/* by default these line heights are huge and frustrating */
+.legend-content-group-wrapper h2 {
+    line-height: 1em;
+}
+
+/* the button-like elements in the legend are actually just styled divs with an */
+/* onclick attribute */
+div#map_legend div.pointer {
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 2px 5px 2px 5px;
+    cursor:pointer;
+    padding: 2px 2px 2px 5px;
+}
+
+
+/* if you want, you can make the text in the legend less ugly by adding
+extra css instructions here, or adding classes when you create the 
+legends in javascript. Advisable! */
+
+div#map_legend h1 {
+    
+}
+
+div#map_legend h3 {
+
+}
+
+/* BUTTONS */
+/* These are the actual buttons at the top of the legend */
+/*just for fun, we can style the buttons using classes
+  button.rounded means "all buttons with the class of
+  rounded".  button#hide meands "the button with the
+  id of hide"
+*/
+button.rounded {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    border: 1px black solid;
+}
+button#hide {
+    background:orange;
+}
+button#reset {
+    background:green;
+}
+
+
+/* MAP POPUPS */
+/* Leaflet Popups crate 2 divs each: div.leaflet-popup-content-wrapper and 
+   div.leaflet-popup-content. You can address them as you like.*/
+div.leaflet-popup-content {
+}
+
+div.leaflet-popup-content img {
+}
+
+
+/* MEDIA QUERIES */
+/* These media queries allow layout to adjust to screen size */
+@media only screen and (max-width:1200px) {
+    .main-container {
+        grid-template-areas: "intro intro" "map legend" "main main";
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .main-container {
+        grid-template-areas: "intro" "map" "legend" "main";
+    }
+}
+
