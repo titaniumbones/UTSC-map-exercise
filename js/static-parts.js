@@ -2,19 +2,13 @@
 // across individual pages
 
 let menuEntries = [
-  {text: "Home",
+  {text: "Map",
    link: 'index.html'},
-  {text: 'Oral History',
-   link: 'oral-history/index.html'},
-  {text: 'Mapping',
-   link: 'spatial-history/index.html'},
-  {text: 'Proposal',
-   link: 'project-proposal/index.html'}
 ];
 
 
 let authorName='YOUR NAME HERE',
-    footerHtml=`HTML projects by ${authorName}, originally written for <a href="https://digitalhistory.github.io/dh-website/">HIS393: Digital History</a>`;
+    footerHtml=`Map Exercise by ${authorName}, based on code from  <a href="https://github.com/titaniumbones/UTSC-map-exercise">this repository</a>`;
 
 
 function makeMenu (items= menuEntries) {
@@ -31,14 +25,20 @@ function makeMenu (items= menuEntries) {
     html += `<a href="${prefix}${i.link}">${i.text}</a>`;
   }
   html = '<div class="nav-right">' + html + "</div>";
-  $('header.nav').append(html);
+  return html
 }
- 
+
+function makeHeader (items = menuEntries) {
+  let title = `<a class="navbar-brand pull-right" href="#">${document.title}</a>`,
+      menu = makeMenu (items);
+  $('header.nav').append( title + menu);
+}
+
 function makeFooter (html) {
   $('footer#page-footer').html(`<main>${html}</main>`);
 }
 
-makeMenu (menuEntries);
+makeHeader (menuEntries);
 makeFooter (footerHtml);
 
 
