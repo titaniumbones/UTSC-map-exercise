@@ -79,6 +79,10 @@ div.leaflet-popup-content {
 div.leaflet-popup-content img {
 }
 
+main.main-container section {
+    overflow: auto;
+}
+
 @media only screen and (max-width:1200px) {
     .main-container {
         grid-template-areas: "intro intro" "map legend" "main main";
