@@ -2,14 +2,27 @@
 
 **WARNING (Feb 17, 2021)** This repository is being constructed in preparation for my talk on Feb. 26. Please expect things to change. In particular, the git history is still being pruned so `git pull` may fail in future.
 
-**NOTE:** This code has mostly been extracted from [a real assignment I use in my own Digital History class](https://github.com/DigitalHistory/advanced-topics). Please feel free to experiment with the code as you wish. 
+**NOTE:** This code has mostly been extracted from [a real assignment I use in my own Digital History class](https://github.com/DigitalHistory/advanced-topics). Please feel free to experiment with the code as you wish, either here or there. 
 
+## Getting Started
+By now you know the routine:
+- fire up [VS Code](https://code.visualstudio.com/)
+- make sure you've installed the [History Hack Pack](https://marketplace.visualstudio.com/items?itemName=digital-history.history-hack-pack)
+- you'll **really** need [Node](https://nodejs.org/en/) this time
+- `git clone` and `npm install`
+- edit away
 
+## What's in here
+Notice the directories `js`, `css`, and `spatial-history`. All your work should take place in the files contained therein. 
+- `./spatial-history/index.html` contains the web page skeleton into which your content will be poured
+- `./spatial-history/intro.md` and `./spatial-history/index.md` are provided for your essay's introduction & main body, respectively. These should be written in markdown syntax
+- `./css/site-styles.css` allow you to style the elements as you wish
+- **`./js/maps-setup.js` is where you will do almost all of your technical work!** 
 
-There's a lot more to read here, but for now what you probably want is [a link to the map project code](./spatial-history/README.org).
+We'll go over these in class.
 
-## Viewing the repo
-Because of browser security settings, this repository will not display properly when you try to view the files directly in your browser.  **This is good -- you don't want your browser to read and write sensitive files on your computer!** However, it's a bit inconvenient for us. In order to check your work, you will need to start a simple server in the repository. the easiest way to do that is to `npm run server` from the command line or by using the npm run scrpt command in VSCode. This will serve the files at `localhost:8080`; if you navigate there in your browser, you will see the live files. Your work will not always update automatically. In Chrome, open devtools and then click and hold the refresh button on the toolbar; choose "Empty Cashe and Reload".  In Firefox, [follow these instructions](https://support.mozilla.org/en-US/questions/1103414). For live reload, run `npm run watch` instead; however, this can lead to some display problems with dynamic content such as maps. I've also added a convenience function that will open the map directly: `npm run servemap`
+## Viewing Your Work
+Because of browser security settings, this repository will not display properly when you try to view the files directly in your browser.  **This is good -- you don't want your browser to read and write sensitive files on your computer!** However, it's a bit inconvenient for us. In order to check your work, you will need to start a simple server in the repository. the easiest way to do that is to `npm run server` from the command line or by using the npm run script command in VSCode. This will serve the files at `localhost:8080`; if you navigate there in your browser, you will see the live files. Your work will not always update automatically. In Chrome, open devtools and then click and hold the refresh button on the toolbar; choose "Empty Cache and Reload".  In Firefox, [follow these instructions](https://support.mozilla.org/en-US/questions/1103414). For live reload, run `npm run watch` instead; however, this can lead to some display problems with dynamic content such as maps. I've also added a convenience function that will open the map directly: `npm run servemap`
 
 
 ## Markdown rendering in this repo
