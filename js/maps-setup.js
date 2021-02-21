@@ -93,27 +93,27 @@ let slythMarkerInfo =
     [
         {position: [55.48997247517858,-1.5944015979766843],
          title: "Room of Requirement",
-         description: '<p>one half of the Cabinet is located here.</p>'
+         description: `<p>One half of the Cabinet is located here. See "Deatheaters' Travel" for further discussion.</p>`
         },
         {position: [55.49058639152367,-1.5940092937469482],
          title: "Fenrir Greyback",
-         description: `<p>An evil and spiteful werewolf, he thirsts for blood and impatiently awaits Dumbledore's demise.</p>`
+         description: `<p>An evil and spiteful werewolf, he thirsts for blood and impatiently awaits Dumbledore's demise. At least, that's what we've traditionally been told.</p>`
         },
         {position: [55.61679475360749,-1.6392910480499268],
          title: "Isle of the Locket",
-         description: `<p>A forlorn and terrifying sea cave, guarded by an army of the undead and many other magical protections</p>`},
+         description: `<p>A forlorn and terrifying sea cave, guarded by an army of the undead and many other magical protections -- according to Potter's account in <em>My Struggle to Survive</em>. The post-mortem police investigations are curiously silent on these circumstances.</p>`},
         {position: [ 55.49086601004396, -1.5939261297996548 ],
          title: "Draco Malfoy",
-         description: "<p>Weak-willed, dissatisfied, and a natural bully, Draco Malfoy has nonetheless plotted the murder of his own headmaster.</p>"},
+         description: "<p>Weak-willed, dissatisfied, and a natural bully, Draco Malfoy has nonetheless plotted the murder of his own headmaster. Must we accept this narrative in its entirety, or can we see, in the inconsistencies, the traces of an ideological formation, or a self-policing discourse?</p>"},
         {position: [ 55.49046495468512, -1.5939583064545149 ],
          title: "Severus Snape",
          icon: mysteryIcon,
-         description: `<p>what drives him? How has he survived so long with so much decption, such intense longing, guilt, and hatred?`}
+         description: `<p>what drives him? How has he survived so long with so much decption, such intense longing, guilt, and hatred? Perhaps a more sophisticated analysis can finally begin to answer these questions. `}
     ],
     gryfMarkerInfo =
     [{position: [55.49058639152367,-1.5951092937469482],
       title: "Dumbledore Lies Dying",
-      description: "<p>Afflicted by a curse for over a year, and gravely weakened by a powerful poison, Dumbledore lies on the ground, barely mobile.</p>"
+      description: "<p>Afflicted by a curse for over a year, and gravely weakened by a powerful poison, Dumbledore lies on the ground, barely mobile. But who is the real power here?</p>"
      }];
 
 
@@ -141,7 +141,7 @@ const townsData={
   "features": [
     {
       "type": "Feature",
-        "properties": {myColor: hogCol, title: "Hogwarts School", description: "Terrifying events are commonplace here." },
+        "properties": {myColor: hogCol, title: "Hogwarts School", description: `Terrifying events are commonplace here, a fact which undermines the simplistic opposition between "Good" and "Evil", whatever our received understanding of the Second War.` },
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -151,7 +151,7 @@ const townsData={
     },
     {
       "type": "Feature",
-        "properties": {myColor: meadeCol, title: "Town of Hogsmeade", description: "Home of Butterbeer"},
+        "properties": {myColor: meadeCol, title: "Town of Hogsmeade", description: "A number of unresolved questions about the relationship between Hogsmeade and Hogwarts remain pertinent to historical investigations. Why, for instance, have municipal authorities never responded to life-threatening incidents on school property?"},
       "geometry": {
         "type": "Polygon",
         "coordinates": [[[-1.6042613983154297,55.490701879667895],[-1.6042077541351318,55.49065933144361],[-1.6042184829711914,55.49068364472025],[-1.604926586151123,55.49031894399501],[-1.607351303100586,55.49065933144361],[-1.6081881523132324,55.489923847732406],[-1.6085636615753174,55.48901815057725],[-1.6068792343139648,55.48843460312515],[-1.6042506694793701,55.487723392980776],[-1.6029417514801023,55.48743161074576],[-1.600785255432129,55.48822792799636],[-1.5991652011871336,55.48898167911473],[-1.599959135055542,55.490033259401876],[-1.5986931324005127,55.491479896236754],[-1.5987253189086914,55.49171694510582],[-1.5996050834655762,55.49194791442662],[-1.6010427474975586,55.49192360193031],[-1.6019654273986814,55.49204516426178],[-1.6025233268737793,55.491795961078495],[-1.6033065319061277,55.491340097517046],[-1.6042613983154297,55.490701879667895]]        ]
@@ -178,7 +178,7 @@ let gryffindor = L.rectangle([[ 55.49021561150901, -1.5941441059112549],
     fillColor: gryfCol,
     fillOpacity: 0.35,
     title: 'Gryffindor',
-    windowContent: `<h3>Gryffindor</h3><p>The Good Guys Live here</p3>`
+    windowContent: `<h3>Gryffindor</h3><p>In the received narrative tradition, the Good Guys live here</p>`
 });
 
 let slytherin = L.rectangle([[ 55.48954090449621, -1.5956997871398926], [55.490288552115494, -1.594712734222412]], {
@@ -188,7 +188,7 @@ let slytherin = L.rectangle([[ 55.48954090449621, -1.5956997871398926], [55.4902
     fillColor: slythCol,
     fillOpacity: 0.35,
     title: 'Slytherin',
-    windowContent: `<h3>Slytherin</h3><p>The Bad Guys Live here</p3>`
+    windowContent: `<h3>Slytherin</h3><p>In the received narrative, the Bad Guys Live here</p3>`
 });
 
 let headmasterTower = L.circle([55.4907, -1.5944], {
@@ -199,7 +199,8 @@ let headmasterTower = L.circle([55.4907, -1.5944], {
     fillOpacity: 0.35,
     radius: 40,
     title: 'Headmaster\'s Tower',
-    windowContent: `<h3>Headmaster's Tower</h3><p>Scene of the the Fatal Act.</p>`
+    windowContent: `<h3>Headmaster's Tower</h3>
+     <p>Scene of the the Fatal Act. As we shall see, recently-discovered archival evidence raises a number of questions about the contents of Dumboledore's office.</p>`
 });
 
 let houses = processManualLayers([gryffindor, slytherin, headmasterTower],
@@ -215,7 +216,9 @@ let vanishingPath = L.polyline([[51.37178037591737, -0.2197265625],
                                     color: slythCol,
                                     weight: 6,
                                     title: 'DeathEaters Travel',
-                                    windowContent: `<h3>Line of Travel for Deatheaters</h3><p>From the twin Vanishing Cabinet, the Deatheraters can travel directly from Bourquin and Burkes</p>`})
+                                    windowContent: `<h3>Line of Travel for Deatheaters</h3>
+                                   <p>From the twin Vanishing Cabinet, the Deatheraters can travel directly from Bourquin and Burkes.
+                                    While tradition lays responsibility for this act at the feet of Draco Malfoy, the truth is somewhat more complicated.</p>`})
 
 
 let tunnelPath = L.polyline([[55.49065933144361,-1.6042077541351318],
@@ -223,14 +226,15 @@ let tunnelPath = L.polyline([[55.49065933144361,-1.6042077541351318],
                                     color: gryfCol,
                                     weight: 6,
                                     title: 'Tunnel to Hogsmeade',
-                                    windowContent: `<h3>Marauders' Map Tunnel</h3><p>Not really sure why this worked in the first couple of books.</p>`})
+                                    windowContent: `<h3>Marauders' Map Tunnel</h3><p>Textbook accounts of these events have yet to explain the failure of authorities to use these tnnels to protect students' well-being.</p>`})
 
 let horcruxPath = L.polyline([[55.49058639152367,-1.5951092937469482],
                               [55.61679475360749,-1.6392910480499268]], {
                                   color: gryfCol,
                                   weight: 4,
                                   title: 'Return from Horcrux quest',
-                                  windowContent: `<h3>Return Disapparation from Failed Horcrux quest</h3><p>Exhaisted and grieviously injured, Dumbledore returns to find the trap he had so long expected has been sprung.</p>`})
+                                  windowContent: `<h3>Return Disapparation from Failed Horcrux quest</h3><p>Exhaisted and grieviously injured, Dumbledore returns to find the trap he had so long expected has been sprung.
+                                   Canonical accounts are based solely on the testimony of Harry Potter, which has not been corroborated.</p>`})
 let paths = processManualLayers([vanishingPath, tunnelPath, horcruxPath], {description: 'Paths'})
 
 
