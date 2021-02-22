@@ -108,7 +108,7 @@ let slythMarkerInfo =
         {position: [ 55.49046495468512, -1.5939583064545149 ],
          title: "Severus Snape",
          icon: mysteryIcon,
-         description: `<p>what drives him? How has he survived so long with so much decption, such intense longing, guilt, and hatred? Perhaps a more sophisticated analysis can finally begin to answer these questions. `}
+         description: `<p>What drives him? How has he survived so long with so much decption, such intense longing, guilt, and hatred? Perhaps a more sophisticated analysis can finally begin to answer these questions. `}
     ],
     gryfMarkerInfo =
     [{position: [55.49058639152367,-1.5951092937469482],
@@ -178,7 +178,7 @@ let gryffindor = L.rectangle([[ 55.49021561150901, -1.5941441059112549],
     fillColor: gryfCol,
     fillOpacity: 0.35,
     title: 'Gryffindor',
-    windowContent: `<h3>Gryffindor</h3><p>In the received narrative tradition, the Good Guys live here</p>`
+    windowContent: `<h3>Gryffindor</h3><p>In the received narrative tradition, the Good Guys live here.</p>`
 });
 
 let slytherin = L.rectangle([[ 55.48954090449621, -1.5956997871398926], [55.490288552115494, -1.594712734222412]], {
@@ -188,7 +188,7 @@ let slytherin = L.rectangle([[ 55.48954090449621, -1.5956997871398926], [55.4902
     fillColor: slythCol,
     fillOpacity: 0.35,
     title: 'Slytherin',
-    windowContent: `<h3>Slytherin</h3><p>In the received narrative, the Bad Guys Live here</p3>`
+    windowContent: `<h3>Slytherin</h3><p>In the received narrative, the Bad Guys live here.</p3>`
 });
 
 let headmasterTower = L.circle([55.4907, -1.5944], {
@@ -200,7 +200,7 @@ let headmasterTower = L.circle([55.4907, -1.5944], {
     radius: 40,
     title: 'Headmaster\'s Tower',
     windowContent: `<h3>Headmaster's Tower</h3>
-     <p>Scene of the the Fatal Act. As we shall see, recently-discovered archival evidence raises a number of questions about the contents of Dumboledore's office.</p>`
+     <p>Scene of the the Fatal Act. As we shall see, recently discovered archival evidence raises a number of questions about the contents of Dumbledore's office.</p>`
 });
 
 let houses = processManualLayers([gryffindor, slytherin, headmasterTower],
@@ -217,7 +217,7 @@ let vanishingPath = L.polyline([[51.37178037591737, -0.2197265625],
                                     weight: 6,
                                     title: 'DeathEaters Travel',
                                     windowContent: `<h3>Line of Travel for Deatheaters</h3>
-                                   <p>From the twin Vanishing Cabinet, the Deatheraters can travel directly from Bourquin and Burkes.
+                                   <p>From the twin Vanishing Cabinet, the Deatheaters can travel directly from Borgin and Burkes.
                                     While tradition lays responsibility for this act at the feet of Draco Malfoy, the truth is somewhat more complicated.</p>`})
 
 
@@ -226,14 +226,14 @@ let tunnelPath = L.polyline([[55.49065933144361,-1.6042077541351318],
                                     color: gryfCol,
                                     weight: 6,
                                     title: 'Tunnel to Hogsmeade',
-                                    windowContent: `<h3>Marauders' Map Tunnel</h3><p>Textbook accounts of these events have yet to explain the failure of authorities to use these tnnels to protect students' well-being.</p>`})
+                                    windowContent: `<h3>Marauders' Map Tunnel</h3><p>Textbook accounts of these events have yet to explain the failure of authorities to use these tunnels to protect students' well-being.</p>`})
 
 let horcruxPath = L.polyline([[55.49058639152367,-1.5951092937469482],
                               [55.61679475360749,-1.6392910480499268]], {
                                   color: gryfCol,
                                   weight: 4,
-                                  title: 'Return from Horcrux quest',
-                                  windowContent: `<h3>Return Disapparation from Failed Horcrux quest</h3><p>Exhaisted and grieviously injured, Dumbledore returns to find the trap he had so long expected has been sprung.
+                                  title: 'Return from Horcrux Quest',
+                                  windowContent: `<h3>Return Disapparation from Failed Horcrux Quest</h3><p>Exhausted and grieviously injured, Dumbledore returns to find the trap he had so long expected has been sprung.
                                    Canonical accounts are based solely on the testimony of Harry Potter, which has not been corroborated.</p>`})
 let paths = processManualLayers([vanishingPath, tunnelPath, horcruxPath], {description: 'Paths'})
 

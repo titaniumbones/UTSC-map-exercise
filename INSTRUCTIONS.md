@@ -9,9 +9,9 @@ You should write a short essay, approximately 900 words (\~ 3-4 pages double-spa
 
 Here are some plausible examples of appropriate topics:
 
--   Corridor of Power: Berlin's Friedrichstrasse in the Nazi Era
--   End of an Era: Toronto's last meatpacking plants
--   An Empire at Home: Conservative Think Tanks in Washington, D.C.
+- Corridor of Power: Berlin's Friedrichstrasse in the Nazi Era
+- End of an Era: Toronto's Last Meatpacking Plants
+- An Empire at Home: Conservative Think Tanks in Washington, D.C.
 
 I just made these up, of course. You should pick something that you (a) know something about already, and (b) are interested in. Ideally, you will already have done some research into this topic, and will have a small number of sources ready to hand. The essay should introduce the reader to the topic, and make a not-too-complex argument which, again, highlights the spatial component. ("Think tanks, so important in the construction of policy in today's United States, are a relatively new feature of American politics. In this paper, I will discuss the early history of this now-paramount institutional form, and argue that the *geographical proximity* of these think tanks along [K Street](https://goo.gl/maps/Z74f1xY9ah72) in Washington, D.C. contributes to the insular nature of the intellectual culture at these institutions.")
 
@@ -74,11 +74,11 @@ Your browser should open a new tab at `localhost:8080/spatial-history`, pointed 
 
 Push your code to the main branch as usual. The state of the main branch on Github at the due date will constitute your submission!
 
--   Your code should work!
--   Remember: minimum 5 markers, but other layers can also add a **lot** of depth, so consider them seriously.
--   The map should provide **substantive information** on the topic of your essay, not merely pretty illustration
--   the essay should meet the criteria for a B or B+ essay: it should be well-organized; it should make a compelling argument for a coherent thesis; it should display a level of historical understanding appropriate for a mid-level undergraduate course.
--   As it stands, there are some minor ugly spots in the CSS for the project. You should try to improve these at least a little bit, using [../css/site-styles.css](../css/site-styles.css).
+- Your code should work!
+- Remember: minimum 5 markers, but other layers can also add a **lot** of depth, so consider them seriously.
+- The map should provide **substantive information** on the topic of your essay, not merely pretty illustration
+- The essay should meet the criteria for a B or B+ essay: it should be well-organized; it should make a compelling argument for a coherent thesis; it should display a level of historical understanding appropriate for a mid-level undergraduate course.
+- As it stands, there are some minor ugly spots in the CSS for the project. You should try to improve these at least a little bit, using [../css/site-styles.css](../css/site-styles.css).
 
 ## Further brief notes on the code
 
